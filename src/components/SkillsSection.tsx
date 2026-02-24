@@ -13,46 +13,52 @@ const colorMap: Record<string, { bg: string; text: string; border: string }> = {
   "Soft Skills": { bg: "hsl(150 60% 45% / 0.12)", text: "hsl(150 60% 65%)", border: "hsl(150 60% 45% / 0.25)" },
 };
 
-const SkillsSection = () =>
-<section id="skills" className="py-24 px-6 bg-[hsl(250,20%,8%)]">
+const SkillsSection = () => (
+  <section id="skills" className="py-24 px-6 bg-[hsl(250,20%,8%)]">
     <div className="max-w-6xl mx-auto">
       <motion.h2
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-3xl sm:text-4xl font-bold mb-12 gradient-text">
-
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-3xl sm:text-4xl font-bold mb-12 gradient-text"
+      >
         Skills
       </motion.h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {Object.entries(skills).map(([category, items], i) =>
-      <motion.div
-        key={category}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: i * 0.05 }}
-        className="rounded-2xl p-6 bg-muted">
-
+        {Object.entries(skills).map(([category, items], i) => (
+          <motion.div
+            key={category}
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: i * 0.07, ease: "easeOut" }}
+            className="rounded-2xl p-6 bg-muted"
+          >
             <h3 className="font-semibold text-lg mb-4 text-foreground">{category}</h3>
             <div className="flex flex-wrap gap-2">
-              {items.map((skill) => {
-            const colors = colorMap[category] || { bg: "hsl(var(--primary) / 0.12)", text: "hsl(var(--primary))", border: "hsl(var(--primary) / 0.25)" };
-            return (
-              <span
-                key={skill}
-                className="text-xs px-3 py-1.5 rounded-full font-medium border"
-                style={{ backgroundColor: colors.bg, color: colors.text, borderColor: colors.border }}>
-                {skill}
-              </span>
-            );
-          })}
+              {items.map((skill, j) => {
+                const colors = colorMap[category] || { bg: "hsl(var(--primary) / 0.12)", text: "hsl(var(--primary))", border: "hsl(var(--primary) / 0.25)" };
+                return (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.7 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: i * 0.07 + j * 0.03 + 0.2, type: "spring", stiffness: 200 }}
+                    className="text-xs px-3 py-1.5 rounded-full font-medium border"
+                    style={{ backgroundColor: colors.bg, color: colors.text, borderColor: colors.border }}
+                  >
+                    {skill}
+                  </motion.span>
+                );
+              })}
             </div>
           </motion.div>
-      )}
+        ))}
       </div>
     </div>
-  </section>;
-
+  </section>
+);
 
 export default SkillsSection;
