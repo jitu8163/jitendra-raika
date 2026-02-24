@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import profileImg from "@/assets/profile.jpeg";
 
 const links = [
   { label: "About", href: "#about" },
@@ -28,8 +29,9 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold gradient-text font-[Space_Grotesk]">
-          JR
+        <a href="#" className="flex items-center gap-2">
+          <img src={profileImg} alt="Jitendra Raika" className="w-8 h-8 rounded-full object-cover ring-2 ring-primary" />
+          <span className="text-xl font-bold gradient-text font-[Space_Grotesk]">JR</span>
         </a>
         <div className="hidden md:flex gap-6">
           {links.map((l) => (
