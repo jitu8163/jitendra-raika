@@ -29,9 +29,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <a href="#" className="flex items-center">
           <img src={profileImg} alt="Jitendra Raika" className="w-8 h-8 rounded-full object-cover ring-2 ring-primary" />
-          <span className="text-xl font-bold gradient-text font-[Space_Grotesk]">JR</span>
         </a>
         <div className="hidden md:flex gap-6">
           {links.map((l) => (
