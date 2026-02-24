@@ -27,43 +27,34 @@ const ContactSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="flex flex-wrap justify-center gap-4 mb-12"
       >
-        {[
-          { href: `mailto:${personalInfo.email}`, icon: <Mail size={18} />, label: "Email Me", style: "bg-gradient-to-r from-[hsl(270,80%,60%)] to-[hsl(220,90%,55%)] text-white font-semibold hover:opacity-90 transition-opacity" },
-          { href: personalInfo.linkedin, icon: <Linkedin size={18} />, label: "LinkedIn", style: "border border-[hsl(180,70%,45%)] text-foreground hover:bg-[hsl(180,70%,45%,0.1)] transition-colors", external: true },
-          { href: personalInfo.portfolio, icon: <Globe size={18} />, label: "Portfolio", style: "border border-[hsl(25,95%,55%)] text-foreground hover:bg-[hsl(25,95%,55%,0.1)] transition-colors", external: true },
-        ].map((link, i) => (
-          <motion.a
-            key={link.label}
-            href={link.href}
-            target={link.external ? "_blank" : undefined}
-            rel={link.external ? "noreferrer" : undefined}
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.35 + i * 0.1, type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className={`flex items-center gap-2 px-6 py-3 rounded-full ${link.style}`}
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 gradient-text">Get In Touch</h2>
+        <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+          I'm always open to new opportunities and collaborations. Feel free to reach out!
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[hsl(270,80%,60%)] to-[hsl(220,90%,55%)] text-white font-semibold hover:opacity-90 transition-opacity"
           >
-            {link.icon} {link.label}
-          </motion.a>
-        ))}
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="flex justify-center gap-6 text-sm text-muted-foreground"
-      >
-        {languages.map((l) => (
-          <span key={l.name}>
-            {l.name}: <span className="text-foreground">{l.level}</span>
-          </span>
-        ))}
+            <Mail size={18} /> Email Me
+          </a>
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-[hsl(180,70%,45%)] text-foreground hover:bg-[hsl(180,70%,45%,0.1)] transition-colors"
+          >
+            <Linkedin size={18} /> LinkedIn
+          </a>
+        </div>
+        <div className="flex justify-center gap-6 text-sm text-muted-foreground">
+          {languages.map((l) => (
+            <span key={l.name}>
+              {l.name}: <span className="text-foreground">{l.level}</span>
+            </span>
+          ))}
+        </div>
       </motion.div>
     </div>
 

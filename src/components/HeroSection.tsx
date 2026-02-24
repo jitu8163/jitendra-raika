@@ -57,8 +57,8 @@ const HeroSection = () =>
         <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-foreground transition-colors">
           <Linkedin size={14} /> LinkedIn
         </a>
-        <a href={personalInfo.portfolio} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-foreground transition-colors">
-          <Globe size={14} /> Portfolio
+        <a href={personalInfo.github} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-foreground transition-colors">
+          <Globe size={14} /> Github
         </a>
       </motion.div>
 

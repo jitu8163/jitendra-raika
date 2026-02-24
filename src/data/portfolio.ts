@@ -2,9 +2,9 @@ export const personalInfo = {
   name: "Jitendra Raika",
   tagline: "AI/ML Engineer | Data Scientist",
   location: "Jaipur, Rajasthan",
-  email: "jitendraraika72@gmail.com",
-  linkedin: "https://www.linkedin.com/in/jitendra-raika",
-  portfolio: "https://jitendraraika.netlify.app",
+  email: "jitendraraika8163@gmail.com",
+  github: "https://github.com/jitu8163",
+  linkedin: "https://www.linkedin.com/in/jituraika816",
   summary:
     "Dynamic and results-driven AI/ML professional with hands-on experience in building intelligent systems, deploying NLP and computer vision models, and working with large language models. Proficient in Python, TensorFlow, and cloud platforms. Skilled in developing scalable data pipelines, fine-tuning transformer models, and designing user-centric AI solutions. Eager to apply cutting-edge AI technologies to solve complex, real-world challenges and drive meaningful innovation.",
 };
