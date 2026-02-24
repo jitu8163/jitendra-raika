@@ -24,7 +24,16 @@ const HeroSection = () => (
         transition={{ delay: 0.4 }}
         className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-4 gradient-text"
       >
-        {personalInfo.name.toUpperCase()}
+        {personalInfo.name.toUpperCase().split("").map((char, i) => (
+          <motion.span
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 + i * 0.05, type: "spring", stiffness: 150 }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
