@@ -16,9 +16,10 @@ const AboutSection = () => (
       <motion.div
         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        whileHover={{ y: -4, transition: { duration: 0.2 } }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-        className="rounded-2xl bg-card p-8 gradient-border"
+        className="rounded-2xl bg-card p-8 gradient-border transition-shadow duration-300 hover:shadow-[0_8px_30px_-8px_hsl(270,80%,60%,0.2)]"
       >
         <p className="text-muted-foreground leading-relaxed text-lg">
           {personalInfo.summary}

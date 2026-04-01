@@ -45,7 +45,10 @@ const ExperienceSection = () => (
                 transition={{ duration: 0.3, delay: i * 0.15 + 0.2, type: "spring", stiffness: 300 }}
                 className={`absolute left-2.5 top-1 w-3 h-3 rounded-full ${colors[i % colors.length]} ring-4 ring-background`}
               />
-              <div className="rounded-2xl bg-card p-6">
+              <motion.div
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="rounded-2xl bg-card p-6 gradient-border transition-shadow duration-300 hover:shadow-[0_8px_30px_-8px_hsl(270,80%,60%,0.2)]"
+              >
                 <p className="text-sm text-muted-foreground mb-1">{exp.period}</p>
                 <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
                 <p className="text-muted-foreground mb-4">
@@ -66,7 +69,7 @@ const ExperienceSection = () => (
                     </motion.li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
