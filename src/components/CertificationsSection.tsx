@@ -3,7 +3,7 @@ import { Award } from "lucide-react";
 import { certifications } from "@/data/portfolio";
 
 const CertificationsSection = () => (
-  <section className="py-24 px-6 bg-[hsl(250,20%,8%)]">
+  <section className="py-24 px-6">
     <div className="max-w-4xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, x: -40 }}

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/portfolio";
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-24 px-6 bg-[hsl(250,20%,8%)]">
+  <section id="projects" className="py-24 px-6">
     <div className="max-w-6xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, x: -40 }}
