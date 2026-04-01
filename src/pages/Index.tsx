@@ -7,18 +7,26 @@ import ProjectsSection from "@/components/ProjectsSection";
 import EducationSection from "@/components/EducationSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
+import CursorFollower from "@/components/CursorFollower";
+import ParticleBackground from "@/components/ParticleBackground";
+import GradientBlobs from "@/components/GradientBlobs";
 
 const Index = () => (
-  <div className="min-h-screen bg-background">
-    <Navbar />
-    <HeroSection />
-    <AboutSection />
-    <SkillsSection />
-    <ExperienceSection />
-    <ProjectsSection />
-    <EducationSection />
-    <CertificationsSection />
-    <ContactSection />
+  <div className="min-h-screen bg-background relative">
+    <CursorFollower />
+    <ParticleBackground />
+    <GradientBlobs />
+    <div className="relative z-10">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <EducationSection />
+      <CertificationsSection />
+      <ContactSection />
+    </div>
   </div>
 );
 
