@@ -22,7 +22,8 @@ const CertificationsSection = () => (
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: i * 0.07, ease: "easeOut" }}
-            className="flex items-start gap-3 rounded-xl bg-card p-4"
+            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+            className="flex items-start gap-3 rounded-xl bg-card p-4 transition-shadow duration-300 hover:shadow-[0_6px_20px_-6px_hsl(270,80%,60%,0.15)]"
           >
             <motion.div
               initial={{ rotate: -90, scale: 0 }}

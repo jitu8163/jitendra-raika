@@ -27,7 +27,8 @@ const EducationSection = () => (
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
-            className="rounded-2xl bg-card p-6 text-center"
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="rounded-2xl bg-card p-6 text-center gradient-border transition-shadow duration-300 hover:shadow-[0_8px_30px_-8px_hsl(270,80%,60%,0.2)]"
           >
             <motion.div
               initial={{ scale: 0 }}

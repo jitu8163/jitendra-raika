@@ -69,7 +69,7 @@ const ExperienceSection = () => (
                     </motion.li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
