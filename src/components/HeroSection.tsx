@@ -4,10 +4,6 @@ import { personalInfo } from "@/data/portfolio";
 
 const HeroSection = () =>
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    {/* Gradient background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(270,80%,15%)] via-[hsl(220,90%,12%)] to-[hsl(180,70%,10%)]" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(270,80%,25%,0.4),transparent_60%)]" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(180,70%,20%,0.3),transparent_60%)] bg-stone-950" />
 
     <div className="relative z-10 text-center px-6 max-w-4xl">
       <motion.p
