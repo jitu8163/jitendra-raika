@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 
 const blobs = [
-  { color: "hsl(270 80% 60% / 0.15)", size: 500, x: "10%", y: "20%", duration: 20 },
-  { color: "hsl(220 90% 55% / 0.12)", size: 400, x: "70%", y: "60%", duration: 25 },
-  { color: "hsl(180 70% 45% / 0.1)", size: 450, x: "50%", y: "10%", duration: 22 },
-  { color: "hsl(330 80% 60% / 0.08)", size: 350, x: "80%", y: "80%", duration: 28 },
+  { color: "hsl(270 80% 60% / 0.06)", size: 500, x: "10%", y: "20%", duration: 25 },
+  { color: "hsl(220 90% 55% / 0.05)", size: 400, x: "70%", y: "60%", duration: 30 },
+  { color: "hsl(180 70% 45% / 0.04)", size: 450, x: "50%", y: "10%", duration: 28 },
 ];
 
 const GradientBlobs = () => (
@@ -19,12 +18,12 @@ const GradientBlobs = () => (
           left: b.x,
           top: b.y,
           background: `radial-gradient(circle, ${b.color}, transparent 70%)`,
-          filter: "blur(80px)",
+          filter: "blur(100px)",
         }}
         animate={{
-          x: [0, 80, -60, 40, 0],
-          y: [0, -60, 40, -80, 0],
-          scale: [1, 1.2, 0.9, 1.1, 1],
+          x: [0, 40, -30, 20, 0],
+          y: [0, -30, 20, -40, 0],
+          scale: [1, 1.1, 0.95, 1.05, 1],
         }}
         transition={{
           duration: b.duration,
