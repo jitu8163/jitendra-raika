@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Globe } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { personalInfo, languages } from "@/data/portfolio";
 
 const ContactSection = () => (
@@ -27,11 +27,8 @@ const ContactSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 gradient-text">Get In Touch</h2>
-        <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-          I'm always open to new opportunities and collaborations. Feel free to reach out!
-        </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <a
             href={`mailto:${personalInfo.email}`}
