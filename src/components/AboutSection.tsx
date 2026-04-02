@@ -19,7 +19,7 @@ const AboutSection = () => (
         whileHover={{ y: -4, transition: { duration: 0.2 } }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-        className="rounded-2xl bg-card p-8 gradient-border transition-shadow duration-300 hover:shadow-[0_8px_30px_-8px_hsl(270,80%,60%,0.2)]"
+        className="rounded-2xl bg-card p-8 gradient-border shadow-[0_4px_20px_-4px_hsl(270,80%,60%,0.15),0_8px_16px_-6px_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_12px_40px_-8px_hsl(270,80%,60%,0.25),0_16px_32px_-10px_rgba(0,0,0,0.5)]"
       >
         <p className="text-muted-foreground leading-relaxed text-lg">
           {personalInfo.summary}

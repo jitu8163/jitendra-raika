@@ -21,7 +21,7 @@ const SkillsSection = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="rounded-2xl p-6 bg-card gradient-border transition-shadow duration-300 hover:shadow-[0_8px_30px_-8px_hsl(270,80%,60%,0.2)]"
+            className="rounded-2xl p-6 bg-card gradient-border shadow-[0_4px_20px_-4px_hsl(270,80%,60%,0.15),0_8px_16px_-6px_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_12px_40px_-8px_hsl(270,80%,60%,0.25),0_16px_32px_-10px_rgba(0,0,0,0.5)]"
           >
             <h3 className="font-semibold text-lg mb-4 text-foreground">{category}</h3>
             <div className="flex flex-wrap gap-2">
