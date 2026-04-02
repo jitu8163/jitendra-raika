@@ -10,7 +10,7 @@ export const personalInfo = {
 };
 
 export const skills = {
-  "Programming Languages": ["Python", "SQL", "JavaScript (basic)"],
+  "Programming Languages": ["Python", "SQL"],
   "Machine Learning & AI": [
     "TensorFlow",
     "Keras",
@@ -31,9 +31,7 @@ export const skills = {
     "Reranking",
     "Prompt Engineering",
     "Intent Routing",
-    "GPT-4",
-    "Llama 2",
-    "Mistral",
+    "OpenAI",
     "Groq",
     "STT",
     "TTS",
@@ -50,6 +48,8 @@ export const skills = {
     "FastAPI",
     "RestAPI",
     "Hugging Face",
+    "OpenAI",
+    "Groq",
     "Twilio",
     "LiveKit",
     "SarvamAI",
@@ -61,6 +61,7 @@ export const skills = {
     "Matplotlib",
     "Seaborn",
     "Power BI",
+    "yData"
   ],
   "Developer Tools": ["Git", "GitLab", "Jupyter Notebook", "VS Code"],
   "Cloud Platforms": ["Google Colab"],
