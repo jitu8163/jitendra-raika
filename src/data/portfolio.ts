@@ -11,7 +11,7 @@ export const personalInfo = {
 
 export const skills = {
   "Programming Languages": ["Python", "SQL"],
-  "Machine Learning & AI": [
+  "Machine Learning": [
     "TensorFlow",
     "Keras",
     "Scikit-learn",
@@ -21,7 +21,7 @@ export const skills = {
     "Model Validation",
     "Cross-Validation",
   ],
-  "Generative AI & LLM Systems": [
+  "Generative AI & LLM's": [
     "RAG",
     "LLMs",
     "LangChain",
@@ -32,10 +32,7 @@ export const skills = {
     "Prompt Engineering",
     "Intent Routing",
     "OpenAI",
-    "Groq",
-    "STT",
-    "TTS",
-    "NLP",
+    "Groq"
   ],
   "Vector Databases & Search": [
     "Qdrant",
@@ -60,11 +57,12 @@ export const skills = {
     "NumPy",
     "Matplotlib",
     "Seaborn",
-    "Power BI",
+    "Microsoft Power BI",
     "yData"
   ],
   "Developer Tools": ["Git", "GitLab", "Jupyter Notebook", "VS Code"],
   "Cloud Platforms": ["Google Colab"],
+  "Natural Language Processing" : ["Speech To Text", "Text To Speech"],
 };
 
 export const experience = [
@@ -117,6 +115,12 @@ export const projects = [
     description:
       "Built an end-to-end RAG pipeline using Qdrant vector database and Sentence-Transformers for accurate semantic knowledge retrieval. Implemented smart chunking, embedding strategies, and reranking for high precision recall in document Q&A tasks.",
     tech: ["Qdrant", "Sentence-Transformers", "LangChain", "Python"],
+  },
+  {
+    name: "Automated Machine Learning Agent – CNN",
+    description:
+      "An Agent that can choose the best Machine Learning Algorithm itself and train the model on the given dataset. It can also perform hyperparameter tuning and feature engineering to improve the model's performance. The agent can be used for any classification problem and can achieve high accuracy with minimal human intervention like uploading the dataset and providing the target variable.",
+    tech: ["Large Language Models", "Prompt Engineering", "Python"],
   },
   {
     name: "Potato Disease Detection – CNN",

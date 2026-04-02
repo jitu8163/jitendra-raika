@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail, Linkedin, Globe } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
+import AIWelcomeAnimation from "./AIWelcomeAnimation";
+import NumericalMindBackground from "./NumericalMindBackground";
 
 const HeroSection = () =>
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-
+    <NumericalMindBackground />
     <div className="relative z-10 text-center px-6 max-w-4xl">
       <motion.p
       initial={{ opacity: 0, y: 20 }}
@@ -14,23 +16,26 @@ const HeroSection = () =>
 
         Welcome to my portfolio
       </motion.p>
-      <motion.h1
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4 }}
-      className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-4 gradient-text">
-
-        {personalInfo.name.toUpperCase().split("").map((char, i) =>
-      <motion.span
-        key={i}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 + i * 0.05, type: "spring", stiffness: 150 }}>
-
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-      )}
-      </motion.h1>
+      <div className="relative inline-block mb-4">
+        <AIWelcomeAnimation />
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight gradient-text"
+        >
+          {personalInfo.name.toUpperCase().split("").map((char, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + i * 0.05, type: "spring", stiffness: 150 }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.h1>
+      </div>
       <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}

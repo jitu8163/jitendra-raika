@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import EducationSection from "@/components/EducationSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
+import NumericalSphere from "@/components/NumericalSphere";
 
 const blobs = [
   { color: "hsl(270 80% 60% / 0.12)", size: 600, x: "5%", y: "10%", duration: 20 },
@@ -201,6 +202,7 @@ const Index = () => (
     <div className="relative z-10 bg-transparent">
       <Navbar />
       <HeroSection />
+      <NumericalSphere />
       <AboutSection />
       <SkillsSection />
       <ExperienceSection />
