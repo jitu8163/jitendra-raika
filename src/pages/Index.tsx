@@ -12,11 +12,13 @@ import ParticleBackground from "@/components/ParticleBackground";
 import GradientBlobs from "@/components/GradientBlobs";
 
 const Index = () => (
-  <div className="min-h-screen relative">
+  <div className="min-h-screen bg-transparent">
     <CursorFollower />
-    <GradientBlobs />
-    <ParticleBackground />
-    <div className="relative z-10">
+    <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+      <GradientBlobs />
+      <ParticleBackground />
+    </div>
+    <div className="relative z-10 bg-transparent">
       <Navbar />
       <HeroSection />
       <AboutSection />
