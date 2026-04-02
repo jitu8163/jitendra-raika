@@ -23,7 +23,7 @@ const CertificationsSection = () => (
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: i * 0.07, ease: "easeOut" }}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="flex items-start gap-3 rounded-xl bg-card p-4 transition-shadow duration-300 hover:shadow-[0_6px_20px_-6px_hsl(270,80%,60%,0.15)]"
+            className="flex items-start gap-3 rounded-xl bg-card p-4 shadow-[0_4px_20px_-4px_hsl(270,80%,60%,0.15),0_8px_16px_-6px_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_12px_40px_-8px_hsl(270,80%,60%,0.25),0_16px_32px_-10px_rgba(0,0,0,0.5)]"
           >
             <motion.div
               initial={{ rotate: -90, scale: 0 }}
